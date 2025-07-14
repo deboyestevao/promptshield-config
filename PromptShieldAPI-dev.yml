@@ -27,16 +27,6 @@ spring:
           options:
             deployment-name: gpt35
 
-  cloud:
-    vault:
-      uri: http://127.0.0.1:8200
-      authentication: token
-      token: hvs.rBQAKAXbvcDyVFD7gWZnXCN9
-      kv:
-        enabled: true
-        backend: secret
-        default-context: application
-
 server:
   error:
     include-message: always
