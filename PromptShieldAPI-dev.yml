@@ -1,4 +1,14 @@
 spring:
+  cloud:
+    vault:
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}
+      uri: http://localhost:8200
+      kv:
+        enabled: true
+        backend: secret
+        default-context: application
+
   datasource:
     url: jdbc:sqlite:database/PromptShieldAPI.db
     driver-class-name: org.sqlite.JDBC
