@@ -10,11 +10,13 @@ spring:
         default-context: application
 
   datasource:
-    url: jdbc:sqlite:database/PromptShieldAPI.db
-    driver-class-name: org.sqlite.JDBC
+    url: jdbc:postgresql://localhost:5432/PromptShieldAPI
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 2020
 
   jpa:
-    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
 
